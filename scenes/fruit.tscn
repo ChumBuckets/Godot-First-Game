@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ifh4ubtq2fr"]
+
+[ext_resource type="Texture2D" uid="uid://dh0yeb5da26i7" path="res://sprites/fruit.png" id="1_2gh25"]
+[ext_resource type="Texture2D" uid="uid://dka042m0wnou8" path="res://sprites/Light.png" id="2_72q8o"]
+
+[node name="Fruit" type="Sprite2D"]
+texture = ExtResource("1_2gh25")
+region_enabled = true
+region_rect = Rect2(15, 16, 18, 16)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.985723, 0.835969, 0.675468, 1)
+texture = ExtResource("2_72q8o")
