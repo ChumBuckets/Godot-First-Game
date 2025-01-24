@@ -189,18 +189,18 @@ func _physics_process(delta: float) -> void:
 	
 	# Turns off collision to stop the player from getting stuck
 	
-	if internal_ray_cast.is_colliding() or internal_ray_cast_2.is_colliding() or internal_ray_cast_3.is_colliding() or internal_ray_cast_4.is_colliding():
-		$Timer.start()
-		animation_player.play("CollisionOff")
+	#if internal_ray_cast.is_colliding() or internal_ray_cast_2.is_colliding() or internal_ray_cast_3.is_colliding() or internal_ray_cast_4.is_colliding():
+		#$Timer.start()
+		#animation_player.play("CollisionOff")
 		
 
 	move_and_slide()
 
 
-#func _on_internal_collission_body_entered(body: Node2D) -> void:
-	#$Timer.start()
-	#animation_player.play("CollisionOff")
-	#print("time")
+func _on_internal_collission_body_entered(body: Node2D) -> void:
+	$Timer.start()
+	animation_player.play("CollisionOff")
+	print("time")
 
 # Turn collision back on
 func _on_timer_timeout() -> void:

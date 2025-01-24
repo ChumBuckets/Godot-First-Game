@@ -324,9 +324,9 @@ debug_color = Color(0, 0.651304, 0.0109376, 0.42)
 position = Vector2(0, -11)
 enabled = false
 color = Color(0.802487, 0.778604, 0.810116, 1)
-energy = 0.85
+energy = 0.56
 texture = ExtResource("4_5gmjs")
-texture_scale = 2.0
+texture_scale = 2.91
 
 [connection signal="body_entered" from="InternalCollission" to="." method="_on_internal_collission_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -11,8 +11,17 @@ extends Node
 
 
 func _on_detect_2_body_entered(body: Node2D) -> void:
-	camera.limit_top = static_body_top.global_position.y
-	camera.limit_bottom = static_body_bottom.global_position.y
-	camera.limit_left = static_body_left.global_position.x
-	camera.limit_right = static_body_right.global_position.x
-	camera.zoom = zoomV2/1.5
+	if camera.limit_top != static_body_top.global_position.y and camera.limit_bottom != static_body_bottom.global_position.y and camera.limit_left != static_body_left.global_position.x and camera.limit_right != static_body_right.global_position.x:
+		camera.limit_top = static_body_top.global_position.y
+		camera.limit_bottom = static_body_bottom.global_position.y
+		camera.limit_left = static_body_left.global_position.x
+		camera.limit_right = static_body_right.global_position.x
+		camera.zoom = zoomV2/1.5
+		GlobalNode.SceneFade = true
+
+##	if camera.limit_top != static_body_top.global_position.y and camera.limit_bottom != static_body_bottom.global_position.y and camera.limit_left != static_body_left.global_position.x and camera.limit_right != static_body_right.global_position.x:
+##		camera.limit_top += static_body_top.global_position.y/100
+##		camera.limit_bottom += static_body_bottom.global_position.y/100
+##		camera.limit_left += static_body_left.global_position.x/100
+##		camera.limit_right += static_body_right.global_position.x/100
+##		camera.zoom = zoomV2/1.5
