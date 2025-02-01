@@ -321,12 +321,19 @@ shape = SubResource("RectangleShape2D_del7a")
 debug_color = Color(0, 0.651304, 0.0109376, 0.42)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(0, -11)
-enabled = false
-color = Color(0.802487, 0.778604, 0.810116, 1)
-energy = 0.56
+position = Vector2(0, -15)
+color = Color(0.869886, 0.590367, 0.280381, 1)
+energy = 0.15
+shadow_enabled = true
 texture = ExtResource("4_5gmjs")
-texture_scale = 2.91
+texture_scale = 10.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(0, -15)
+color = Color(0.869886, 0.590367, 0.280381, 1)
+shadow_enabled = true
+texture = ExtResource("4_5gmjs")
+texture_scale = 2.88
 
 [connection signal="body_entered" from="InternalCollission" to="." method="_on_internal_collission_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

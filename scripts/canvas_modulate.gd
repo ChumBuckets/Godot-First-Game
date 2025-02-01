@@ -1,11 +1,11 @@
 extends CanvasModulate
 
 @export var gradiant:GradientTexture1D
-@export var DayNight:float = 2.0
+@export var DayNight:float = 1.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	## DayNight += delta / 10 
+	##DayNight += delta / 10 
 	
 	
 	var value = (sin(DayNight - PI/2) + 1.0) / 2.0 

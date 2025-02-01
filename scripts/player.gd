@@ -55,7 +55,8 @@ func _physics_process(delta: float) -> void:
 	##elif slide_cast.is_colliding() and not is_on_floor() and get_gravity() > velocity and WallJumping == false:
 		##velocity = velocity * delta
 	
-
+	if Input.is_action_just_pressed("reset"):
+		global_position = Vector2(90, 250)
 	# Handle jump.
 	 
 	if Input.is_action_pressed("Jump") and jump_hold_time > 0 and (is_on_floor() or coyote_time > 0 or AirJump == true):
